@@ -2,15 +2,16 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: dev-clusters
+  name: placement-test-policies-limit-range
   namespace: rhacm-policies
 spec:
   clusterConditions:
-  - type: ManagedClusterConditionAvailable
-    status: "True"
+    - status: 'True'
+      type: ManagedClusterConditionAvailable
   clusterSelector:
     matchExpressions:
-      - key: environment
+      - key: arch
         operator: In
         values:
-        - "dev"
+          - s390x
+     
