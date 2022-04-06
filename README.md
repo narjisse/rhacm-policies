@@ -1,1 +1,1 @@
-A RHACM policy demo for article.
+A RHACM policy demo.
